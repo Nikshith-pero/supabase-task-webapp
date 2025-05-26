@@ -1,10 +1,6 @@
-// Replace window.supabase with import if using a build tool
-import { createClient } from '@supabase/supabase-js';
-
-// Use environment variables
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
+const supabase = window.supabase.createClient(
+  'https://glqmrfyvhvzfbaqvcawy.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdscW1yZnl2aHZ6ZmJhcXZjYXd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDczMjU4MDIsImV4cCI6MjA2MjkwMTgwMn0.vBgO9ZOdDnI4crjEjAZ7Ptabw-zLwbzzlHavE5u05hM'
 );
 
 const emailInput = document.getElementById('email');
