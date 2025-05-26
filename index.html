@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supabase Notes App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="auth-section">
+    <h2>Login / Signup</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="signUp()">Sign Up</button>
+    <button onclick="signIn()">Log In</button>
+  </div>
+
+  <div id="notes-section" style="display: none;">
+    <h2>Your Notes</h2>
+    <textarea id="note-text" placeholder="Write a note..."></textarea>
+    <button onclick="addNote()">Add Note</button>
+    <ul id="notes-list"></ul>
+    <button onclick="signOut()">Log Out</button>
+  </div>
+
+  <!-- Supabase Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
